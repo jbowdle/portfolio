@@ -2,7 +2,7 @@ import React from "react";
 
 function ProjectCard(props) {
   return (
-    <li className="project">
+    <li className="project-card">
       <div className="image-div">
         <p>img goes here</p>
       </div>

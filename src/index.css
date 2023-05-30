@@ -1,4 +1,4 @@
-/* create-react-app css */
+/* PRE-PACKAGED CREATE-REACT-APP STYLES */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,14 +7,55 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* END CREATE-REACT-APP STYLES */
 
-/* my css */
-ul, 
+
+/* MY CSS */
+/* color storage */
+:root {
+  --main: rgb(0, 0, 0);
+  --accent-1: rgb(115, 4, 4);
+  --accent-1-text: rgb(255, 255, 255);
+  --accent-2: rgb(136, 110, 93);
+  --accent-2-text: rgb(255, 255, 255);
+}
+/* RESETS */
+h1,
+h2 {
+  margin: 0;
+}
+ul,
 li {
   list-style: none;
+  padding: 0;
 }
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  appearance: none;
+}
+/* END RESETS */
+/* GLOBAL STYLES */
+body {
+  width: 100%;
+  margin: 0 auto;
+}
+header {
+  position: sticky;
+  top: 0px;
+  background-color: var(--accent-1);
+  color: var(--accent-1-text);
+}
+/* END GLOBAL STYLES */
+/* PROJECT CARD STYLES */
+.project-card {
+  background-color: var(--accent-2);
+  color: var(--accent-2-text);
+}
+/* END PROJECT CARD STYLES */
