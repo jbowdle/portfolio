@@ -4,7 +4,7 @@ import ProjectCard from "./components/ProjectCard";
 
 function App(props) {
   const projectList = props.projects.map((project) => (
-    <ProjectCard id={project.id} name={project.name} key={project.id}/>
+    <ProjectCard id={project.id} image={project.image} alt={project.alt} name={project.name} key={project.id}/>
   ));
 
   return (
@@ -14,7 +14,11 @@ function App(props) {
         <Nav />
       </header>
       <main>
-        {projectList}
+        <section class="section-main">
+          <ul class="project-container">
+            {projectList}
+          </ul>
+        </section>
       </main>
       <Footer /> 
     </div>

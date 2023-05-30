@@ -52,6 +52,15 @@ header {
   background-color: var(--accent-1);
   color: var(--accent-1-text);
 }
+.section-main {
+  width: 1200px;
+  margin: 0 auto;
+}
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 /* END GLOBAL STYLES */
 /* PROJECT CARD STYLES */
 .project-card {

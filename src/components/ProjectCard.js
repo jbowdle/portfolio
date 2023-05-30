@@ -4,7 +4,7 @@ function ProjectCard(props) {
   return (
     <li className="project-card">
       <div className="image-div">
-        <p>img goes here</p>
+        <img src={props.image} alt={props.alt}></img>
       </div>
       <div className="title-card">
         <p>{props.name}</p>
