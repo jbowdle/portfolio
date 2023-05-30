@@ -1,5 +1,4 @@
-import logo from './logo.svg';
-import './App.css';
+import ProjectCard from "./components/ProjectCard";
 
 function App() {
   return (
@@ -13,7 +12,8 @@ function App() {
         <a>Bio</a>
       </nav>
       <main>
-
+        <ProjectCard name="example 1" />
+        <ProjectCard name="example 2" />
       </main>
       <footer>
         {/* Place contact info here */}
