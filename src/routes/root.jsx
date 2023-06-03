@@ -1,3 +1,5 @@
+import { Outlet, NavLink } from "react-router-dom";
+
 export default function Root() {
   return (
     <div>
@@ -7,7 +9,14 @@ export default function Root() {
           <nav>
             <a>About</a>
             <i className="burger-bar"></i>
-            <a>Coding Projects</a>
+            <NavLink 
+              to="/projects" 
+              className={({ isActive, isPending }) => 
+                isPending ? "pending" : isActive ? "active" : ""
+              } 
+            >
+              Projects
+            </NavLink>
             <i className="burger-bar"></i>
             <a>Resume</a>
             <i className="burger-bar"></i>
@@ -19,9 +28,7 @@ export default function Root() {
       </aside>
       <main>
         <section className="section-main">
-          <ul className="project-container">
-            {/* {projectList} */}
-          </ul>
+          <Outlet />
         </section>
       </main>
       <footer>

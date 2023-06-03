@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import "./index.css";
 import Root from "./routes/root";
+import Projects from "./routes/projects";
 
 const router = createBrowserRouter([
   {
@@ -13,7 +14,12 @@ const router = createBrowserRouter([
     element: <Root />,
     // errorElement: <ErrorPage />,
     // loader: rootLoader,
-    // children: [],
+    children: [
+      {
+        path: "projects",
+        element: <Projects />,
+      },
+    ],
   },
 ]);
 
