@@ -6,18 +6,30 @@ import {
 } from "react-router-dom";
 import "./index.css";
 import Root from "./routes/root";
-import Projects from "./routes/projects";
+import ErrorPage from "./error-page";
+import About from "./routes/about";
+import Portfolio from "./routes/portfolio";
+import Resume from "./routes/resume";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
-    // errorElement: <ErrorPage />,
-    // loader: rootLoader,
+    errorElement: <ErrorPage />,
     children: [
       {
-        path: "projects",
-        element: <Projects />,
+        errorElement: <ErrorPage />,
+        children: [
+          { index: true, element: <About />},
+          {
+            path: "project-portfolio",
+            element: <Portfolio />,
+          },
+          {
+            path: "Resume",
+            element: <Resume />,
+          },
+        ],
       },
     ],
   },

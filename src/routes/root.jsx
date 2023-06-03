@@ -7,18 +7,32 @@ export default function Root() {
         <h1>John Bowdle</h1>
         <div className="burger">
           <nav>
-            <a>About</a>
-            <i className="burger-bar"></i>
             <NavLink 
-              to="/projects" 
+              to="/" 
               className={({ isActive, isPending }) => 
                 isPending ? "pending" : isActive ? "active" : ""
               } 
             >
-              Projects
+              About
             </NavLink>
             <i className="burger-bar"></i>
-            <a>Resume</a>
+            <NavLink 
+              to="/project-portfolio" 
+              className={({ isActive, isPending }) => 
+                isPending ? "pending" : isActive ? "active" : ""
+              } 
+            >
+              Project Portfolio
+            </NavLink>
+            <i className="burger-bar"></i>
+            <NavLink 
+              to="/resume" 
+              className={({ isActive, isPending }) => 
+                isPending ? "pending" : isActive ? "active" : ""
+              } 
+            >
+              Resume
+            </NavLink>
             <i className="burger-bar"></i>
           </nav>
         </div>

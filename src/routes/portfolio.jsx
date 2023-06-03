@@ -9,7 +9,7 @@ const PROJECT_DATA = [
   { id: "project-5", image: "assets/placeholder.png", alt: "Placeholder image for an example project", name: "Example Project 6" },
 ]
 
-export default function Projects() {
+export default function Portfolio() {
   const projectList = PROJECT_DATA.map((project) => (
     <ProjectCard id={project.id} image={project.image} alt={project.alt} name={project.name} key={project.id}/>
   ));
