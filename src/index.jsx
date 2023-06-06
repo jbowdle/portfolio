@@ -10,6 +10,7 @@ import ErrorPage from "./error-page";
 import About from "./routes/about";
 import Portfolio from "./routes/portfolio";
 import Resume from "./routes/resume";
+import ProjectPage from "./routes/project-page"
 
 const router = createBrowserRouter([
   {
@@ -26,8 +27,12 @@ const router = createBrowserRouter([
             element: <Portfolio />,
           },
           {
-            path: "Resume",
+            path: "resume",
             element: <Resume />,
+          },
+          {
+            path: "project",
+            element: <ProjectPage />,
           },
         ],
       },
