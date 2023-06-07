@@ -10,15 +10,57 @@ import ErrorPage from "./error-page";
 import About from "./routes/about";
 import Portfolio from "./routes/portfolio";
 import Resume from "./routes/resume";
-import ProjectPage from "./routes/project-page"
+import ProjectPage, { loader as projectLoader } from "./routes/project-page"
 
 const PROJECT_DATA = [
-  { id: "project-0", image: "assets/placeholder.png", alt: "Placeholder image for an example project", name: "Example Project 1" },
-  { id: "project-1", image: "assets/placeholder.png", alt: "Placeholder image for an example project", name: "Example Project 2" },
-  { id: "project-2", image: "assets/placeholder.png", alt: "Placeholder image for an example project", name: "Example Project 3" },
-  { id: "project-3", image: "assets/placeholder.png", alt: "Placeholder image for an example project", name: "Example Project 4" },
-  { id: "project-4", image: "assets/placeholder.png", alt: "Placeholder image for an example project", name: "Example Project 5" },
-  { id: "project-5", image: "assets/placeholder.png", alt: "Placeholder image for an example project", name: "Example Project 6" },
+  { 
+    name: "Example-Project-1", 
+    id: "project-0", image: "assets/placeholder.png", alt: "Placeholder image for an example project",
+    tags: ["tag1", "tag2", "tag3"],  
+    desc: "replace this desc!",
+    repoLink: "https://github.com/jbowdle/portfolio",
+    deployedLink: "https://github.com/jbowdle/portfolio", 
+  },
+  {
+    name: "Example-Project-2", 
+    id: "project-1", image: "assets/placeholder.png", alt: "Placeholder image for an example project", 
+    tags: ["tag1", "tag2", "tag3"], 
+    desc: "replace this desc!",
+    repoLink: "https://github.com/jbowdle/portfolio",
+    deployedLink: "https://github.com/jbowdle/portfolio",  
+  },
+  { 
+    name: "Example-Project-3",
+    id: "project-2", image: "assets/placeholder.png", alt: "Placeholder image for an example project",  
+    tags: ["tag1", "tag2", "tag3"], 
+    desc: "replace this desc!",
+    repoLink: "https://github.com/jbowdle/portfolio",
+    deployedLink: "https://github.com/jbowdle/portfolio",  
+  },
+  { 
+    name: "Example-Project-4", 
+    id: "project-3", image: "assets/placeholder.png", alt: "Placeholder image for an example project", 
+    tags: ["tag1", "tag2", "tag3"], 
+    desc: "replace this desc!",
+    repoLink: "https://github.com/jbowdle/portfolio",
+    deployedLink: "https://github.com/jbowdle/portfolio",  
+  },
+  { 
+    name: "Example-Project-5",
+    id: "project-4", image: "assets/placeholder.png", alt: "Placeholder image for an example project",  
+    tags: ["tag1", "tag2", "tag3"], 
+    desc: "replace this desc!",
+    repoLink: "https://github.com/jbowdle/portfolio",
+    deployedLink: "https://github.com/jbowdle/portfolio",  
+  },
+  { 
+    name: "Example-Project-6", 
+    id: "project-5", image: "assets/placeholder.png", alt: "Placeholder image for an example project", 
+    tags: ["tag1", "tag2", "tag3"], 
+    desc: "replace this desc!",
+    repoLink: "https://github.com/jbowdle/portfolio",
+    deployedLink: "https://github.com/jbowdle/portfolio",  
+  },
 ]
 
 const router = createBrowserRouter([
@@ -40,8 +82,9 @@ const router = createBrowserRouter([
             element: <Resume />,
           },
           {
-            path: "project",
-            element: <ProjectPage />,
+            path: "project/:projectName",
+            element: <ProjectPage projects={PROJECT_DATA}/>,
+            loader: projectLoader,
           },
         ],
       },

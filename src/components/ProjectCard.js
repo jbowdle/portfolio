@@ -1,15 +1,17 @@
 import React from "react";
 
 function ProjectCard(props) {
+  // changes dashes in project name to allow for better display
+  const displayName = props.name.replaceAll("-", " ");
+
   return (
     <li className="project-card">
-      {/* TODO: let this accept specific pages through props */}
-      <a href="/project">
+      <a href={`/project/${props.name}`}>
         <div className="image-div">
           <img src={props.image} alt={props.alt}></img>
         </div>
         <div className="title-card">
-          <p>{props.name}</p>
+          <p>{displayName}</p>
         </div>
       </a>
     </li>
