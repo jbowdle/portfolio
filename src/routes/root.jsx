@@ -1,6 +1,6 @@
 import { Outlet, NavLink } from "react-router-dom";
 
-export default function Root() {
+export default function Root(props) {
   return (
     <div>
       <header>
@@ -42,7 +42,7 @@ export default function Root() {
       </aside>
       <main>
         <section className="section-main">
-          <Outlet />
+          <Outlet projects={props.projects}/>
         </section>
       </main>
       <footer>

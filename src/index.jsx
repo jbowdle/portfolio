@@ -12,6 +12,15 @@ import Portfolio from "./routes/portfolio";
 import Resume from "./routes/resume";
 import ProjectPage from "./routes/project-page"
 
+const PROJECT_DATA = [
+  { id: "project-0", image: "assets/placeholder.png", alt: "Placeholder image for an example project", name: "Example Project 1" },
+  { id: "project-1", image: "assets/placeholder.png", alt: "Placeholder image for an example project", name: "Example Project 2" },
+  { id: "project-2", image: "assets/placeholder.png", alt: "Placeholder image for an example project", name: "Example Project 3" },
+  { id: "project-3", image: "assets/placeholder.png", alt: "Placeholder image for an example project", name: "Example Project 4" },
+  { id: "project-4", image: "assets/placeholder.png", alt: "Placeholder image for an example project", name: "Example Project 5" },
+  { id: "project-5", image: "assets/placeholder.png", alt: "Placeholder image for an example project", name: "Example Project 6" },
+]
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -24,7 +33,7 @@ const router = createBrowserRouter([
           { index: true, element: <About />},
           {
             path: "project-portfolio",
-            element: <Portfolio />,
+            element: <Portfolio projects={PROJECT_DATA}/>,
           },
           {
             path: "resume",
