@@ -1,7 +1,4 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import ProjectCard from "../components/ProjectCard";
 
 const PROJECT_DATA = [
   { id: "project-0", image: "assets/placeholder.png", alt: "Placeholder image for an example project", name: "Example Project 1" },
@@ -12,9 +9,14 @@ const PROJECT_DATA = [
   { id: "project-5", image: "assets/placeholder.png", alt: "Placeholder image for an example project", name: "Example Project 6" },
 ]
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App projects={PROJECT_DATA}/>
-  </React.StrictMode>
-);
+export default function Portfolio() {
+  const projectList = PROJECT_DATA.map((project) => (
+    <ProjectCard id={project.id} image={project.image} alt={project.alt} name={project.name} key={project.id}/>
+  ));
+
+  return (
+    <ul className="project-container">
+      {projectList}
+    </ul>
+  )
+}
