@@ -17,6 +17,11 @@ export default function ProjectInfo(props) {
   // changes dashes in project name to allow for better display
   const displayName = projectData.name.replaceAll("-", " ");
 
+  const pageTitle = `John Bowdle's Portfolio - ${displayName}`;
+  if (document.title !== pageTitle) {
+    document.title = pageTitle;
+  }
+
   return (
     // example HTML
     <div>
