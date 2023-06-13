@@ -5,38 +5,33 @@ export default function Root(props) {
     <div>
       <header>
         <h1>John Bowdle</h1>
-        <div className="burger">
-          <nav>
-            <NavLink 
-              to="/" 
-              className={({ isActive, isPending }) => 
-                isPending ? "pending" : isActive ? "active" : ""
-              } 
-            >
-              About
-            </NavLink>
-            <i className="burger-bar"></i>
-            <NavLink 
-              to="/project-portfolio" 
-              className={({ isActive, isPending }) => 
-                isPending ? "pending" : isActive ? "active" : ""
-              } 
-            >
-              Project Portfolio
-            </NavLink>
-            <i className="burger-bar"></i>
-            <NavLink 
-              to="/resume" 
-              className={({ isActive, isPending }) => 
-                isPending ? "pending" : isActive ? "active" : ""
-              } 
-            >
-              Resume
-            </NavLink>
-            <i className="burger-bar"></i>
-          </nav>
-        </div>
       </header>
+      <nav>
+        <NavLink 
+          to="/" 
+          className={({ isActive, isPending }) => 
+            isPending ? "pending" : isActive ? "active" : ""
+          } 
+        >
+          About
+        </NavLink>
+        <NavLink 
+          to="/project-portfolio" 
+          className={({ isActive, isPending }) => 
+            isPending ? "pending" : isActive ? "active" : ""
+          } 
+        >
+          Project Portfolio
+        </NavLink>
+        <NavLink 
+          to="/resume" 
+          className={({ isActive, isPending }) => 
+            isPending ? "pending" : isActive ? "active" : ""
+          } 
+        >
+          Resume
+        </NavLink>
+      </nav>
       <aside>
         
       </aside>

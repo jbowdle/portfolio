@@ -62,7 +62,7 @@ body {
 }
 header {
   /* position: sticky; */
-  top: 0px;
+  /* top: 0px; */
   /* background-color: var(--accent-1); */
   color: var(--accent-1-text);
 }
@@ -95,25 +95,19 @@ header {
 }
 /* END GLOBAL STYLES */
 /* HEADER STYLES */
-header { 
+nav {
+  position: sticky;
+  top: 0px;
   display: flex;
   justify-content: space-around;
 }
-nav {
-  display: grid;
+nav a {
+  background-color: var(--accent-1);
+  flex: auto;
+  text-align: center;
 }
-.burger {
-  display: grid;
-}
-.burger-bar {
-  height: 2px;
-  width: 50px;
-  margin: 5px;
-  /* move this to color storage */
-  background-color: black;
-}
-.nav-link{
-  display: none;
+nav a.active {
+  background-color: gray;
 }
 #collapse {
   display: none;
