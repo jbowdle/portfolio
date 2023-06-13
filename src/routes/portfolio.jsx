@@ -12,8 +12,13 @@ export default function Portfolio(props) {
   ));
 
   return (
-    <ul className="project-container">
-      {projectList}
-    </ul>
+    <div className="portfolio-container">
+      <h2>Web Development Portfolio</h2>
+      <p>Hover over projects to see their tags and click to go to the project page</p>
+      <ul className="project-container">
+        {projectList}
+      </ul>
+    </div>
+    
   )
 }

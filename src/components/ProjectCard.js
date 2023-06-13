@@ -13,6 +13,11 @@ function ProjectCard(props) {
         <div className="title-card">
           <p>{displayName}</p>
         </div>
+        <div className="tags">
+          <ul>
+            <li>tags go here</li>
+          </ul>
+        </div>
       </a>
     </li>
   );

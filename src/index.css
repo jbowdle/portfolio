@@ -18,16 +18,16 @@ code {
 /* color storage */
 :root {
   color-scheme: light dark;
-  --main: rgb(0, 0, 0);
-  --accent-1: rgb(145, 1, 1);
+  --main: rgb(25, 188, 136);
+  --accent-1: rgb(25, 188, 136);
   --accent-1-text: rgb(255, 255, 255);
-  --accent-2: rgb(181, 94, 94);
+  --accent-2: rgb(108, 144, 132);
   --accent-2-text: rgb(255, 255, 255);
   /* dark colors */
-  --d-main: rgb(0, 0, 0);
-  --d-accent-1: rgb(71, 6, 6);
+  --d-main: rgb(32, 32, 32);
+  --d-accent-1: rgb(6, 71, 50);
   --d-accent-1-text: rgb(255, 255, 255);
-  --d-accent-2: rgb(78, 66, 66);
+  --d-accent-2: rgb(89, 105, 100);
   --d-accent-2-text: rgb(255, 255, 255);
 }
 /* RESETS */
@@ -58,16 +58,20 @@ a:hover {
 body {
   width: 100%;
   margin: 0 auto;
+  background-color: var(--main);
 }
 header {
-  position: sticky;
+  /* position: sticky; */
   top: 0px;
-  background-color: var(--accent-1);
+  /* background-color: var(--accent-1); */
   color: var(--accent-1-text);
 }
 @media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--d-main);
+  }
   header {
-    background-color: var(--d-accent-1);
+    /* background-color: var(--d-accent-1); */
     color: var(--d-accent-1-text);
   }
 }
@@ -75,10 +79,19 @@ header {
   width: 1200px;
   margin: 0 auto;
 }
+.portfolio-container {
+  text-align: center;
+}
 .project-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+.project-card {
+  margin: 4px;
+}
+.tags {
+  display: none;
 }
 /* END GLOBAL STYLES */
 /* HEADER STYLES */
