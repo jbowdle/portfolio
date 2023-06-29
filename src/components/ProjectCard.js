@@ -1,6 +1,6 @@
 import React from "react";
 
-function ProjectCard(props) {
+export default function Project(props) {
   // changes dashes in project name to allow for better display
   const displayName = props.name.replaceAll("-", " ");
 
@@ -22,5 +22,3 @@ function ProjectCard(props) {
     </li>
   );
 }
-
-export default ProjectCard;

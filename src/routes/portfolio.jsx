@@ -1,4 +1,4 @@
-import ProjectCard from "../components/ProjectCard";
+import Project from "../components/ProjectCard";
 
 export default function Portfolio(props) {
   const pageTitle = "John Bowdle's Portfolio - Portfolio";
@@ -8,7 +8,7 @@ export default function Portfolio(props) {
   }
 
   const projectList = props.projects.map((project) => (
-    <ProjectCard id={project.id} image={project.image} alt={project.alt} name={project.name} key={project.id}/>
+    <Project id={project.id} image={project.image} alt={project.alt} name={project.name} key={project.id}/>
   ));
 
   return (
