@@ -18,17 +18,17 @@ code {
 /* color storage */
 :root {
   color-scheme: light dark;
-  --main: rgb(255, 255, 255);
-  --accent-1: rgb(25, 188, 136);
-  --accent-1-text: rgb(255, 255, 255);
-  --accent-2: rgb(108, 144, 132);
-  --accent-2-text: rgb(164, 149, 8);
+  --main: rgb(221, 226, 198);
+  --accent-1: rgb(151, 166, 126);
+  --accent-1-text: rgb(0, 0, 0);
+  --accent-2: rgb(167, 38, 8);
+  --accent-2-text: rgb(167, 38, 8);
   /* dark colors */
   --d-main: rgb(21, 20, 20);
-  --d-accent-1: rgb(6, 71, 50);
+  --d-accent-1: rgb(78, 85, 67);
   --d-accent-1-text: rgb(255, 255, 255);
-  --d-accent-2: rgb(89, 105, 100);
-  --d-accent-2-text: rgb(236, 232, 21);
+  --d-accent-2: rgb(241, 65, 25);
+  --d-accent-2-text: rgb(241, 65, 25);
 }
 /* RESETS */
 h1,
@@ -90,13 +90,13 @@ header {
   color: var(--accent-2-text);
 }
 nav {
-  position: sticky;
   width: 60%;
   margin: 0 auto;
-  top: 0px;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   color: gray;
+  height: 3rem;
 }
 nav a {
   flex: auto;
@@ -147,19 +147,19 @@ nav a.active {
 }
 /* portfolio colors */
 .project-card {
-  background-color: var(--accent-2);
-  color: var(--accent-2-text);
+  background-color: var(--accent-1);
+  color: var(--accent-1-text);
 }
 .title-card {
-  background-color: var(--accent-2);
+  background-color: var(--accent-1);
 }
 @media (prefers-color-scheme: dark) {
   .project-card {
-    background-color: var(--d-accent-2);
-  color: var(--d-accent-2-text);
+    background-color: var(--d-accent-1);
+  color: var(--d-accent-1-text);
   }
   .title-card {
-    background-color: var(--d-accent-2);
+    background-color: var(--d-accent-1);
   }
 }
 /* END PROJECT CARD STYLES */
