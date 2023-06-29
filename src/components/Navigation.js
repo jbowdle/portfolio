@@ -20,6 +20,14 @@ export default function Navigation() {
       >
         Project Portfolio
       </NavLink>
+      <NavLink
+        to="/contact"
+        className={({ isActive, isPending }) =>
+          isPending ? "pending" : isActive ? "active" : ""
+        }
+      >
+        Contact
+      </NavLink>
       <NavLink 
         to="/resume" 
         className={({ isActive, isPending }) => 

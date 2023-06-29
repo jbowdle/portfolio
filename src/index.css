@@ -93,6 +93,11 @@ header {
 .tags {
   display: none;
 }
+.warning {
+  border: 2px solid red;
+  border-radius: 5px;
+  background-color: rgb(170, 77, 77);
+}
 /* END GLOBAL STYLES */
 /* HEADER STYLES */
 nav {
@@ -125,3 +130,13 @@ nav a.active {
   }
 }
 /* END PROJECT CARD STYLES */
+/* CONTACT STYLES */
+.required {
+  display: none;
+  color: red;
+}
+#email-warning {
+  display: none;
+  color: red;
+}
+/* END CONTACT STYLES */

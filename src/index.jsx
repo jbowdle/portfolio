@@ -9,6 +9,7 @@ import Root from "./routes/root";
 import ErrorPage from "./error-page";
 import About from "./routes/about";
 import Portfolio from "./routes/portfolio";
+import Contact from "./routes/contact";
 import Resume from "./routes/resume";
 import ProjectPage, { loader as projectLoader } from "./routes/project-page"
 import PROJECT_DATA from "./projectData";
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
           {
             path: "project-portfolio",
             element: <Portfolio projects={PROJECT_DATA}/>,
+          },
+          {
+            path: "contact",
+            element: <Contact />,
           },
           {
             path: "resume",
