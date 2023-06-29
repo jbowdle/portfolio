@@ -23,17 +23,16 @@ export default function ProjectInfo(props) {
   }
 
   return (
-    // example HTML
     <div>
       <div className="project-gallery">
-        <img src={`../../${projectData.image}`}/>
+        <img src={`../../${projectData.image}`} alt={projectData.alt}/>
       </div>
       <div className="project-info">
-        <h1>Proj: {displayName}</h1>
+        <h1>{displayName}</h1>
         <div>
           <p>{projectData.desc}</p>
-          <a href={projectData.repoLink}>Link to Project Repo</a>
-          <a href={projectData.deployedLink}>Link to deployed Project</a>
+          <a href={projectData.repoLink}>Project Repo</a>
+          {/* <a href={projectData.deployedLink}>Deployed Project</a> */}
         </div>
       </div>
     </div>
