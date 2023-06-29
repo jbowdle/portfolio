@@ -18,17 +18,17 @@ code {
 /* color storage */
 :root {
   color-scheme: light dark;
-  --main: rgb(25, 188, 136);
+  --main: rgb(255, 255, 255);
   --accent-1: rgb(25, 188, 136);
   --accent-1-text: rgb(255, 255, 255);
   --accent-2: rgb(108, 144, 132);
-  --accent-2-text: rgb(255, 255, 255);
+  --accent-2-text: rgb(164, 149, 8);
   /* dark colors */
-  --d-main: rgb(32, 32, 32);
+  --d-main: rgb(21, 20, 20);
   --d-accent-1: rgb(6, 71, 50);
   --d-accent-1-text: rgb(255, 255, 255);
   --d-accent-2: rgb(89, 105, 100);
-  --d-accent-2-text: rgb(255, 255, 255);
+  --d-accent-2-text: rgb(236, 232, 21);
 }
 /* RESETS */
 h1,
@@ -53,6 +53,10 @@ a {
 a:hover {
   text-decoration: none;
 }
+p {
+  margin: 0;
+  padding: 0;
+}
 /* END RESETS */
 /* GLOBAL STYLES */
 body {
@@ -60,24 +64,19 @@ body {
   margin: 0 auto;
   background-color: var(--main);
 }
-header {
-  /* position: sticky; */
-  /* top: 0px; */
-  /* background-color: var(--accent-1); */
-  color: var(--accent-1-text);
-}
 @media (prefers-color-scheme: dark) {
   body {
     background-color: var(--d-main);
   }
-  header {
-    /* background-color: var(--d-accent-1); */
-    color: var(--d-accent-1-text);
-  }
+}
+#page-container {
+  position: relative;
+  min-height: 100vh;
 }
 .section-main {
   width: 1200px;
   margin: 0 auto;
+  padding-bottom: 100px;
 }
 .warning {
   border: 2px solid red;
@@ -86,22 +85,33 @@ header {
 }
 /* END GLOBAL STYLES */
 /* HEADER STYLES */
+header {
+  text-align: center;
+  color: var(--accent-2-text);
+}
 nav {
   position: sticky;
+  width: 60%;
+  margin: 0 auto;
   top: 0px;
   display: flex;
   justify-content: space-around;
+  color: gray;
 }
 nav a {
-  background-color: var(--accent-1);
   flex: auto;
   text-align: center;
 }
 nav a.active {
-  background-color: gray;
+  color: black;
 }
-#collapse {
-  display: none;
+@media (prefers-color-scheme: dark) {
+  header {
+    color: var(--d-accent-2-text);
+  }
+  nav a.active {
+    color: white;
+  }
 }
 /* END HEADER STYLES */
 /* PROJECT CARD STYLES */
@@ -174,3 +184,26 @@ nav a.active {
   color: red;
 }
 /* END CONTACT STYLES */
+/* FOOTER STYLES */
+footer {
+  position: absolute;
+  bottom: 0;
+  height: 40px;
+  width: 100%;
+}
+#footer-links {
+  width: 40%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+footer p a {
+  color: var(--accent-2-text);
+}
+
+@media (prefers-color-scheme: dark) {
+  footer p a {
+    color: var(--d-accent-2-text);
+  }
+}
+/* END FOOTER STYLES */

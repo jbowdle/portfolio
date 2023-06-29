@@ -12,6 +12,7 @@ export default function Navigation() {
       >
         About
       </NavLink>
+      <div>/</div>
       <NavLink 
         to="/project-portfolio" 
         className={({ isActive, isPending }) => 
@@ -20,6 +21,7 @@ export default function Navigation() {
       >
         Project Portfolio
       </NavLink>
+      <div>/</div>
       <NavLink
         to="/contact"
         className={({ isActive, isPending }) =>
@@ -28,6 +30,7 @@ export default function Navigation() {
       >
         Contact
       </NavLink>
+      <div>/</div>
       <NavLink 
         to="/resume" 
         className={({ isActive, isPending }) => 

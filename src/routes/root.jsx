@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 
 export default function Root(props) {
   return (
-    <div>
+    <div id="page-container">
       <Header />
       <main>
         <section className="section-main">
