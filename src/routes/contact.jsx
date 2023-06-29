@@ -25,7 +25,7 @@ export default function Contact() {
   return (
     <div>
       <p className="warning">Contact Page is not functional as this site currently does not have a backend</p>
-      <form>
+      <form id="contact-form">
         <div>
           <label htmlFor="name">Name: </label>
           <input type="text" name="name" id="name" onBlur={handleBlur} required></input>

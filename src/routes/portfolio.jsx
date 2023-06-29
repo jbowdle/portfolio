@@ -13,7 +13,6 @@ export default function Portfolio(props) {
 
   return (
     <div className="portfolio-container">
-      <h2>Web Development Portfolio</h2>
       <ul className="project-container">
         {projectList}
       </ul>

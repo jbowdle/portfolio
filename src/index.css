@@ -74,7 +74,7 @@ body {
   min-height: 100vh;
 }
 .section-main {
-  width: 1200px;
+  width: 60%;
   margin: 0 auto;
   padding-bottom: 100px;
 }
@@ -114,6 +114,17 @@ nav a.active {
   }
 }
 /* END HEADER STYLES */
+/* ABOUT PAGE STYLES */
+#profile-pic {
+  width: 150px;
+  border-radius: 50%;
+  float: left;
+  padding: 20px;
+}
+#about p {
+  padding: 10px;
+}
+/* END ABOUT PAGE STYLES */
 /* PROJECT CARD STYLES */
 .portfolio-container {
   text-align: center;
@@ -197,12 +208,12 @@ footer {
   display: flex;
   justify-content: space-around;
 }
-footer p a {
+footer a {
   color: var(--accent-2-text);
 }
 
 @media (prefers-color-scheme: dark) {
-  footer p a {
+  footer a {
     color: var(--d-accent-2-text);
   }
 }
