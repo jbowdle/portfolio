@@ -25,7 +25,7 @@ export default function ProjectInfo(props) {
   return (
     <div>
       <div className="project-gallery">
-        <img src={`../../${projectData.image}`} alt={projectData.alt}/>
+        <img src={projectData.image} alt={projectData.alt}/>
       </div>
       <div className="project-info">
         <h1>{displayName}</h1>

@@ -6,12 +6,13 @@ export default function Project(props) {
 
   return (
     <li className="project-card">
-      <a href={`/project/${props.name}`}>
+      {/* remove /portfolio/# if not using hashrouter */}
+      <a href={`/portfolio/#/project/${props.name}`}>
         <div className="title-card">
           <p>{displayName}</p>
         </div>
         <div className="image-div">
-          <img src={props.image} alt={props.alt}></img>
+          <img src={`${props.image}`} alt={props.alt}></img>
         </div>
         <div className="tags">
           <ul>

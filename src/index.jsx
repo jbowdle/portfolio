@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { 
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider,
 } from "react-router-dom";
 import "./index.css";
@@ -14,9 +14,10 @@ import Resume from "./routes/resume";
 import ProjectPage, { loader as projectLoader } from "./routes/project-page"
 import PROJECT_DATA from "./projectData";
 
-const router = createBrowserRouter([
+// using hashRouter instead of browserRouter to allow deployment to github pages
+const router = createHashRouter([
   {
-    path: "/",
+    path: "/*",
     element: <Root />,
     errorElement: <ErrorPage />,
     children: [
