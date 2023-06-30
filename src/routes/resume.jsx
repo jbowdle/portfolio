@@ -5,6 +5,7 @@ export default function Resume() {
     document.title = pageTitle;
   }
 
+  // TODO: Transfer data from resume onto page, allowing it to be more easily viewed
   return (
     <div>
       <a href="./assets/john-bowdle-example-resume.docx" download="john-bowdle-resume">Download Resume</a>

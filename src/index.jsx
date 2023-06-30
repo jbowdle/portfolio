@@ -17,6 +17,7 @@ import PROJECT_DATA from "./projectData";
 // using hashRouter instead of browserRouter to allow deployment to github pages
 const router = createHashRouter([
   {
+    // if not using hashrouter, remove * from path
     path: "/*",
     element: <Root />,
     errorElement: <ErrorPage />,

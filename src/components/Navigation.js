@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 export default function Navigation() {
   return (
     <nav>
+      {/* active and pending classes are used to highlight the current page */}
       <NavLink 
         to="/" 
         className={({ isActive, isPending }) => 

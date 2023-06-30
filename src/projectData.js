@@ -1,3 +1,4 @@
+// Contains all data needed for projects to be display in the portfolio and on their individual proj pages
 const PROJECT_DATA = [
   { 
     name: "Caf-Fiend", 

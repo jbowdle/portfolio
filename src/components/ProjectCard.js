@@ -1,5 +1,6 @@
 import React from "react";
 
+// props being passed in come from projectData.js
 export default function Project(props) {
   // changes dashes in project name to allow for better display
   const displayName = props.name.replaceAll("-", " ");

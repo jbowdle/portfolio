@@ -1,3 +1,5 @@
+// Contact page is currently non-functional; waiting on a backend
+
 export default function Contact() {
 
   // checks for valid email

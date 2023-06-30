@@ -8,6 +8,7 @@ export async function loader({ params }) {
 export default function ProjectInfo(props) {
   const projectName = useLoaderData();
 
+  // matches project from the projectName parameter in the url
   const projectData = props.projects.find((project) => {
     if (project.name === projectName) {
       return project

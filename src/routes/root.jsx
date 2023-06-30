@@ -8,6 +8,7 @@ export default function Root(props) {
       <Header />
       <main>
         <section className="section-main">
+          {/* passes projectData down the line */}
           <Outlet projects={props.projects}/>
         </section>
       </main>
